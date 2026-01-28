@@ -7,16 +7,55 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
+		<video autoplay muted loop class="background-video">
+					<source src="wwwroot/background .mp4" type="video/mp4" />
+				</video>
+		<nav class="navigation-bar">
+			<div class="nav-header">
+				<div class="close-btn">
+					<div class="close-line close-line-one"></div>
+					<div class="close-line close-line-two"></div>
+				</div>
+				<a href="#" class="nav-logo"
+					><img src="img/background.webp" alt="Logo"
+				/></a>
+			</div>
+			<div class="nav-main">
+				<a href="#home"><span>HOME</span></a>
+				<a href="#gallery"><span>GALLERY</span></a>
+				<a href="#category"><span>CATEGORY</span></a>
+				<a href="#nomination"><span>NOMINATION</span></a>
+			</div>
+			<div class="nav-footer">
+				<div class='mail'>
+					<img src="img/MailSVG.svg" alt="Mail"><a href='mailto:info@blackseepatterns.com'>info@blackseepatterns.com</a>
+				</div>
+				<div class='phone'>	
+					<img src="img/Vector.svg" alt="phone-icon"><a href='tel:	+380631234567'>+38 (063) 123 45 67</a>
+				</div>
+				<div class="social-media">
+					<a href='#'/><img src="img/Facebook.svg" alt="Facebook"></img></a>
+					<a href='#'/><img src="img/Instagram.svg" alt="Instagram"></img></a>
+					<a href='#'/><img src="img/Telegram App.svg" alt="Telegram"></img></a>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="top-bar">
+				<a href="#" class="info-button">Information for participants</a>
+			</div>
+			<div class="burger-menu">
+				<div class="burger-line burger-line-one"></div>
+				<div class="burger-line burger-line-two"></div>
+				<div class="burger-line burger-line-three"></div>
+			</div>
+		</header>
 		<div class="sections-container">
-			<section class="start-screen section">
-				<header>
-					<div class="top-bar">
-						<a href="#" class="info-button">Information for participants</a>
-					</div>
-					<div class="burger-menu">
-						<img src="img/burger.svg" alt="Menu" />
-					</div>
-				</header>
+			<section id="home" class="start-screen section">
+				<!--TODO: add lazy loading for video, add background image before video, compress video 	     file-->
+				<video autoplay muted loop class="start-screen-background-video">
+					<source src="wwwroot/FestStartVideo.mp4" type="video/mp4" />
+				</video>
 				<div class="background-overlay"></div>
 
 				<main class="main-content">
@@ -33,29 +72,32 @@
 					</div>
 				</main>
 			</section>
-			<section class="slider-section section">
+			<section id="gallery" class="slider-section section">
 				<div class="slider-wrapper">
-					<div class="slider-view">
-						<div class="slide-track">
-							<div class="slide">
-								<img src="img/slider_image_1.png" alt="Image 1" />
-							</div>
-							<div class="slide">
-								<img src="img/slider_image_2.png" alt="Image 2" />
-							</div>
-							<div class="slide">
-								<img src="img/slider_image_3.png" alt="Image 3" />
-							</div>
-							<div class="slide">
-								<img src="img/slider_image_4.png" alt="Image 4" />
-							</div>
+					<div class="slide-track">
+						<div class="slider-button">
+							<button class="slide-button" id="prevBtn"></button>
+							<button class="slide-button" id="nextBtn"></button>
 						</div>
 					</div>
-					<button class="slider-prev">&#10094;</button>
-					<button class="slider-next">&#10095;</button>
+					<div class="slider-view">
+						<div class="slides-container" id="sliderImage"></div>
+					</div>
 				</div>
 			</section>
+			<section id="category" class="section">
+				<!-- TODO: Add content for Category section -->
+			</section>
+			<section id="nomination" class="section">
+				<!-- TODO: Add content for Nomination section -->
+			</section>
 		</div>
+
+		<div id="fullscreen-overlay" class="fullscreen-overlay">
+			<img id="fullscreen-image" src="" alt="Fullscreen Image" />
+		</div>
+
 		<script src="js/script.js"></script>
+		<script src="js/slider.js"></script>
 	</body>
 </html>
